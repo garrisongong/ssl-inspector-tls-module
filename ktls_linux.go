@@ -127,6 +127,10 @@ func InitKTLS() {
 		kTLSSupportNOPAD = true
 	}
 
+	/* force to disable TLS 1.3 for now */
+	kTLSSupportTLS13TX = false
+	kTLSSupportTLS13RX = false
+
 	Debugln("======Supported Features======")
 	Debugf("kTLS TX: %v", kTLSSupportTX)
 	Debugf("kTLS RX: %v", kTLSSupportRX)
